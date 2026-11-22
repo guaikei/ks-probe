@@ -6,6 +6,11 @@ name: ks-probe
 description: "快手账号体检数据源（只读）：关键词搜视频、博主作品与粉丝数据、视频评论，输出 JSON，不登录不发布。触发词：快手、Kuaishou、kwai、快手搜索、快手评论、快手博主。用户要查快手视频、评论、爆款选题、竞品监控、KOL 筛选或评论舆情时使用；抖音、小红书、B站、微博、公众号不要用本技能。"
 license: MIT
 version: 1.1.3
+display_name: "快手账号体检｜健康度诊断·内容短板·发布节奏·改进清单"
+display_name_en: "Kuaishou Probe"
+description_zh: "快手账号体检数据源（只读，无需登录你的快手账号，不发布不点赞不评论，无风控封号问题）：一键取回单个账号的公开数据，输出结构化 JSON，可直接交给 AI 做健康度诊断、内容短板定位、发布节奏评分和改进清单生成。\n\n三类取数能力：①关键词搜索视频，支持综合/最新/最多点赞排序，以及近 1 天/7 天/30 天的时间筛选；②博主作品抓取，加 --limit 0 只取粉丝数、获赞数、关注数，可做发文节奏与涨粉异常分析；③单条作品评论抓取，看评论区在骂还是在夸，判口碑与痛点。\n\n体检打法：先拉博主作品摸清发文节奏与内容短板，再用评论找用户痛点与负面反馈，最后产出诊断结论与可执行改进清单。\n\n规模：按量 Token 单次最多 10000 条；包月搜索最多 30 条、作品最多 50 条、评论最多 60 条，超限返回 PLAN_LIMIT。仅需 Node.js 16.14+ 与 GUAIKEI_API_TOKEN，零第三方依赖。"
+description_en: "Read-only Kuaishou account-audit data source, no login, no ban risk. Pulls a single account's public data as structured JSON so AI can score account health, locate content gaps, judge posting cadence and build an improvement checklist.\n\nThree capabilities: 1) Keyword video search sorted by relevance / newest / most liked, with 1-day, 7-day and 30-day windows. 2) Creator post listing; --limit 0 returns follower, like and following counts only, enough for cadence and growth-anomaly analysis. 3) Comment scraping on a single video to read sentiment, complaints and pain points.\n\nAudit recipe: map posting cadence and weak spots from the creator's posts, mine comments for pain points and negative feedback, then turn the findings into a diagnosis and an actionable checklist.\n\nScale: pay-as-you-go up to 10,000 items per call; monthly plans cap search at 30, posts at 50 and comments at 60, then PLAN_LIMIT. Needs Node.js 16.14+ and GUAIKEI_API_TOKEN."
+author: "新郑市怪奇信息技术工作室"
 metadata:
   openclaw:
     emoji: "📷"
